@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -----------------------
+   CSS RESET + BASELINE
+------------------------ */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* -----------------------
+   BASE TYPOGRAPHY
+------------------------ */
+body {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #0a0a0a;
+  color: #e5e7eb; /* gray-200 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* -----------------------
+   LINKS
+------------------------ */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* -----------------------
+   INPUTS & BUTTONS
+------------------------ */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Remove ugly autofill background */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #262626 inset;
+  -webkit-text-fill-color: #e5e7eb;
+}
+
+/* -----------------------
+   SCROLLBAR (MODERN)
+------------------------ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+/* -----------------------
+   SELECTION
+------------------------ */
+::selection {
+  background-color: #2563eb; /* blue-600 */
+  color: white;
+}
+
+/* -----------------------
+   UTILITY CLASSES
+------------------------ */
+.glass {
+  background: rgba(23, 23, 23, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card {
+  @apply bg-neutral-900 border border-neutral-700 rounded-2xl shadow-xl;
+}
