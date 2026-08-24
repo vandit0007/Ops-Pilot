@@ -17,12 +17,12 @@ app.use("/api/analytics", require("./routes/analyticsRoutes"));
 // db connection
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB connected 🔥"))
+  .then(() => console.log("MongoDB connected "))
   .catch((err) => console.error(err));
 
 // test route
 app.get("/", (req, res) => {
-  res.send("OpsPilot API running 🚀");
+  res.send("OpsPilot API running ");
 });
 
 // start server
